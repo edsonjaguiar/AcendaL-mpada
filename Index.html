@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>      
+    <meta charset="UTF-8"/>
+    <title> Teste Javascript</title>
+    <script>
+        var quebrada = false;
+         function mudalampada(tipo) {
+           
+         if(tipo == 'lampada-acesa' && !quebrada){
+            document.getElementById("luz").src = "http://www.arioliveira.com/alunos/images/lampada-acesa.jpg";
+          }else if(tipo == 'lampada-apagada' && !quebrada){
+             document.getElementById("luz").src = "http://i.stack.imgur.com/b983w.jpg";
+         }
+         else if(tipo == 'lampada-quebrada'){
+            document.getElementById("luz").src = "http://www.arioliveira.com/alunos/images/lampada-quebrada.jpg";
+            quebrada = true;
+         }
+         }     
+         
+    </script>
+    <Style>
+h1 {
+    color: blue;
+}
+</Style>
+</head>
+<body>
+    <h1>Acenda a lâmpada</h1>
+    <img src="http://i.stack.imgur.com/b983w.jpg" id="luz" onmousemove="mudalampada('lampada-acesa')" onmouseout="mudalampada('lampada-apagada')" onclick="mudalampada('lampada-quebrada')"/>
+    <br>
+    <a Href="Formulário.html">Avançar</a>
+</body>
+</html>﻿
